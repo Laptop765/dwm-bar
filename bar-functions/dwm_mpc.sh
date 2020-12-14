@@ -7,7 +7,7 @@
 # Dependencies: mpc
 
 dwm_mpc () {
-    if ps -C mpd > /dev/null; then
+    if ps -C mopidy > /dev/null; then
         ARTIST=$(mpc current -f %artist%)
         TRACK=$(mpc current -f %title%)
         POSITION=$(mpc status | grep "%)" | awk '{ print $3 }' | awk -F/ '{ print $1 }')
